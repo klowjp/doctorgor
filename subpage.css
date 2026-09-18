@@ -1,0 +1,359 @@
+/* Doctor Gor subpage shared styles */
+
+/* ===== Páginas informativas (filosofia, nuestra-historia, nuestro-proceso, politicas) ===== */
+.dg-sub-head {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: #ffffff;
+  border-bottom: 1px solid rgba(24, 29, 39, 0.08);
+}
+.dg-sub-head .inner {
+  max-width: 1216px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dg-sub-head img {
+  height: 44px;
+  width: auto;
+}
+.dg-sub-head a.back {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #181d27;
+  text-decoration: none;
+}
+
+.dg-sub {
+  max-width: 1216px;
+  margin: 0 auto;
+  padding: 70px 20px 90px;
+}
+.dg-sub h1 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #181d27;
+  margin-bottom: 14px;
+  letter-spacing: 0.01em;
+}
+.dg-sub > .lead {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #414651;
+  max-width: 720px;
+}
+.dg-sub h2 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #181d27;
+  margin: 44px 0 10px;
+  letter-spacing: 0.02em;
+}
+.dg-sub p,
+.dg-sub li {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #414651;
+}
+.dg-sub ul,
+.dg-sub ol {
+  padding-left: 20px;
+}
+.dg-sub a {
+  color: #181d27;
+  text-decoration: underline;
+}
+
+.dg-panel {
+  background: #ffffff;
+  border: 1px solid rgba(24, 29, 39, 0.08);
+  border-radius: 12px;
+  padding: 26px 28px;
+  margin-top: 22px;
+}
+.dg-panel h2 {
+  margin-top: 0;
+}
+
+.dg-sub-footer {
+  background: #181d27;
+  color: #fff;
+}
+.dg-sub-footer .inner {
+  max-width: 1216px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.dg-sub-footer .brand {
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.dg-sub-footer nav {
+  display: flex;
+  gap: 24px;
+}
+.dg-sub-footer nav a {
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  opacity: 0.85;
+}
+.dg-sub-footer nav a:hover {
+  opacity: 1;
+}
+
+/* ===== Páginas de producto (estructura de la referencia Wildsmith) ===== */
+
+/* Hero con blur / textos blancos (páginas informativas) */
+.section-banner {
+  overflow: hidden;
+}
+.section-content-and-media .media-container {
+  overflow: hidden;
+}
+
+/* Compactar SOLO las secciones alternadas texto/imagen de las páginas
+   informativas. NO toca el hero (.section-banner) ni las dos últimas
+   secciones (.section-full-width-media y .section-quote-carousel). */
+body.dg-info .section-content-and-media,
+body.dg-info .section-text-intro {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+body.dg-info .section-content-and-media .section-content .grid .grid-item.media .media-container {
+  max-width: 400px;
+  aspect-ratio: 4 / 3;
+  min-height: 0;
+}
+
+/* Layout: galería izquierda, info derecha (55/45) */
+#product-top .section-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  align-items: start;
+}
+
+/* Breadcrumbs */
+#product-top .breadcrumbs {
+  grid-column: 1 / -1;
+  font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: 0.3px;
+  padding: 24px 0;
+  color: #181d27;
+}
+#product-top .breadcrumbs a {
+  color: inherit;
+  text-decoration: none;
+}
+#product-top .breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+/* Galería: 3 imágenes apiladas (desktop) */
+#product-gallery {
+  margin: 0 -16px;
+  background-color: #e3e1db;
+}
+.gallery-slides {
+  display: flex;
+  flex-direction: column;
+}
+.gallery-slide img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+/* Badge Agotado: esquina superior derecha de la primera imagen */
+#product-gallery .gallery-slide {
+  position: relative;
+}
+#product-gallery .gallery-slide .dg-soldout {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 3;
+  background: #c0392b;
+  color: #fff;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 3px;
+  line-height: 1.2;
+}
+
+/* Columna de información */
+#product-info > .inner {
+  position: sticky;
+  top: 96px;
+  justify-self: center;
+  max-width: 416px;
+  width: 100%;
+  padding: 0 0 80px;
+}
+
+/* Título: mayúsculas, sin negritas */
+#product-title .h1 {
+  font-size: 24px;
+  line-height: 1.33;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0 0 32px;
+  color: #181d27;
+}
+
+/* Estrellas */
+.dg-stars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin: 0 0 24px;
+  color: #687975;
+  text-decoration: none;
+}
+.dg-stars svg {
+  width: 13px;
+  height: 13px;
+  fill: #687975;
+}
+.dg-stars .count {
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.3px;
+  margin-left: 4px;
+}
+
+/* Descripción */
+#product-description {
+  margin: 0 0 26px;
+}
+#product-description p {
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  color: #414651;
+  margin: 0;
+}
+
+/* Precio: variante + precio en línea, sin negritas */
+#product-price {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 28px;
+  font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: 0.3px;
+  color: #181d27;
+}
+#product-price .only-variant {
+  padding-right: 12px;
+  border-right: 1px solid #d5d7da;
+  margin-right: 4px;
+}
+
+/* CTA: selector de cantidad + Añadir */
+#product-cta {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+#product-cta .add-to-cart:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+/* Acordeones Tecnología / Resultados */
+#product-specs {
+  margin-bottom: 20px;
+}
+#product-specs .accordion-content p {
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: 0.3px;
+  color: #414651;
+  margin: 0 0 12px;
+}
+#product-specs .accordion-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Sección pestañas Cómo se usa / Ingredientes */
+#product-content-and-media .content-container {
+  text-align: center;
+}
+#product-content-and-media .media-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+#product-content-and-media .slide p {
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: 0.3px;
+  color: #414651;
+  text-align: center;
+  margin: 0 0 12px;
+}
+#product-content-and-media .slide p:last-child {
+  margin-bottom: 0;
+}
+
+/* Relacionados: 4 productos como en el home */
+.section-product-recommender .dg-related-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px 32px;
+  max-width: 1216px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+}
+
+@media (min-width: 992px) {
+  #product-title .h1 {
+    font-size: 30px;
+    line-height: 1.27;
+    letter-spacing: 2.3px;
+    margin-bottom: 24px;
+  }
+  #product-price {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 991px) {
+  #product-top .section-content {
+    grid-template-columns: 1fr;
+  }
+  #product-info > .inner {
+    position: static;
+    max-width: 100%;
+    padding: 28px 0 60px;
+  }
+  .section-product-recommender .dg-related-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px 16px;
+  }
+}

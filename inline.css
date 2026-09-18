@@ -1,0 +1,22 @@
+.loox-icon { font-size: inherit; }a[href='#looxReviews'] { text-decoration:none; color: inherit;}a[href='#looxReviewsFrame'] { text-decoration:none; color: inherit;}.rtl.loox-rating { display: flex; justify-content: flex-start; align-items: center; }.rtl.loox-rating span { padding-right: 5px; }.rtl.loox-rating .loox-icon[data-lx-fill="half"] { transform: rotateY(180deg); }svg.loox-icon { width: 1em; height: 1em; flex-shrink: 0; }.loox-rating .loox-rating-content { display: inline-flex; align-items: center; gap: 2px; vertical-align: middle; }.loox-overlay-is-active { overflow: hidden !important; }.loox-rating[data-alignment="left"]{text-align: left;}.loox-rating[data-alignment="center"]{text-align: center;}.loox-rating[data-alignment="right"]{text-align: right;}.rtl.loox-rating[data-alignment="left"] .loox-rating-content {margin-right: auto;}.rtl.loox-rating[data-alignment="center"] .loox-rating-content {margin: 0 auto}.rtl.loox-rating[data-alignment="right"] .loox-rating-content {margin-left: auto;}.shopify-app-block:has(> .loox-widget) {width: 100%;}.loox-rating[data-floating-product-reviews-enabled="true"] { cursor: pointer; }
+#looxReviews, #looxCarousel {float:none;clear:both;}#looxReviews:before, #looxReviews:after, #looxCarousel:before, #looxCarousel:after {content:" ";visibility:hidden;display:block;height:0;clear:both;}
+
+			.lx-icon-fill {
+				--lx-fill-width: calc(100% - var(--lx-rating-percent, 0%));
+				clip-path: inset(0 var(--lx-fill-width, 0) 0 0);
+			}
+			.lx-icon-line {
+				clip-path: inset(0 0 0 var(--lx-rating-percent, 0%));
+			}
+			[data-lx-fill='empty'] {
+				--lx-rating-percent: 0%;
+			}
+			[data-lx-fill='half'] {
+				--lx-rating-percent: 50%;
+			}
+			[data-lx-fill='full'] {
+				--lx-rating-percent: 100%;
+			}
+		
+.loox-reviews-default { max-width: 1200px; margin: 0 auto; }.loox-rating .loox-icon { color:#687975; }
+:root { --lxs-rating-icon-color: #687975; }
